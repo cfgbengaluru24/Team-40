@@ -5,6 +5,7 @@ import cors from "cors";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import trainerRoutes from "./routes/trainerRoutes.js";
+import pgmRoutes from "./routes/pgmRoutes.js";
 
 dotenv.config();
 const app = express();
