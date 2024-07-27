@@ -37,7 +37,7 @@ const Header = () => {
         Best Practices Foundation
       </div>
       <div className='header-buttons-div'>
-      <button className='header-button'>Testimony</button>
+      <button className='header-button'>Testimonials</button>
         <button className='header-button'>About Us</button>
         <button className='header-button' onClick={handleDonate}>Support Us</button>
       </div>

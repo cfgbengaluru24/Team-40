@@ -70,14 +70,16 @@ function Page2() {
 
     return (
         <div className='page2'>
-            <div className='left'>
-                <div id="quote-container" className='quote-container'>
-                    <p id="quote">{quotes[currentIndex]}</p>
+            <div className='wrapper1'>
+                <div className='left'>
+                    <div id="quote-container" className='quote-container'>
+                        <p id="quote">{quotes[currentIndex]}</p>
+                    </div>
                 </div>
-            </div>
-            <div className='right'>
-                <div id="image-container" className='image-container'>
-                    <img src={images[currentImageIndex]} alt="Slideshow" />
+                <div className='right'>
+                    <div id="image-container" className='image-container'>
+                        <img src={images[currentImageIndex]} alt="Slideshow" />
+                    </div>
                 </div>
             </div>
         </div>
