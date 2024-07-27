@@ -6,6 +6,7 @@ import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import trainerRoutes from "./routes/trainerRoutes.js";
 import pgmRoutes from "./routes/pgmRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -18,6 +19,8 @@ connectDB();
 app.use("/api/admin", adminRoutes);
 app.use("/api/trainer", trainerRoutes);
 app.use("/api/program", pgmRoutes);
+app.use("/api/user", userRoutes);
+
 
 app.use(notFound);
 app.use(errorHandler);

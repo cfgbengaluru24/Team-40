@@ -16,6 +16,7 @@ router.post('/add', async (req, res) => {
         const createdProgram = await program.save();
         res.status(201).json(createdProgram);
     } catch (error) {
+        console.log(error);
         res.status(500).json({ message: error.message });
     }
 });
