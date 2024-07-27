@@ -8,6 +8,7 @@ function LoginForm() {
         <>
             <Header />
             <form className="form">
+            <h1 className="user-title">Welcome Back!</h1>
                 <input type="text" placeholder="Username" />
                 <input type="password" placeholder="Password" />
                 <button type="submit">Login</button><br />

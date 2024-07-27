@@ -8,6 +8,7 @@ function SignupForm() {
         <>
             <Header />
             <form className="form">
+                <h1 className="user-title">Welcome!</h1>
                 <input type="text" placeholder="Username" />
                 <input type="text" placeholder="E-Mail ID" />
                 <input type="password" placeholder="Password" />

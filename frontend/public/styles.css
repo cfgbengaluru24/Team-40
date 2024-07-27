@@ -370,6 +370,7 @@ td {
     font-family: magical;
     text-align: center;
     font-weight: 500;
+    transform: translateY(-1rem);
 }
 
 .user-title2 {
@@ -378,7 +379,6 @@ td {
     font-family: magical;
     text-align: center;
     font-weight: 500;
-    transform: translateY(0.5rem);
 }
 
 .whole-listofusers-div-for-programs {
@@ -397,8 +397,14 @@ td {
 }
 
 form {
-    padding: 20px 0;
+    /* padding: 20px 0; */
     position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 form input {
@@ -648,5 +654,26 @@ select {
     font-family: metrophobic;
     text-decoration: underline;
     font-weight: 400;
-    transform: translateY(2rem);
+    transform: translateY(1rem);
+}
+
+.home-one{
+    background-color: #ffadad;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-img{
+    transform: translateY(4.4rem);
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.7;
+    display: flex;
+    position: relative;
 }
