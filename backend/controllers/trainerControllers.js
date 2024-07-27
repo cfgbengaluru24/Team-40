@@ -1,6 +1,6 @@
-import asyncHandler from 'express-async-handler';
-import Trainer from '../models/trainerModel.js';
-import generateToken from '../utils/generateToken.js';
+import asyncHandler from "express-async-handler";
+import Trainer from "../models/trainerModel.js";
+import generateToken from "../utils/generateToken.js";
 
 const authTrainer = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
@@ -18,7 +18,7 @@ const authTrainer = asyncHandler(async (req, res) => {
     });
   } else {
     res.status(401);
-    throw new Error('Invalid email or password');
+    throw new Error("Invalid email or password");
   }
 });
 
@@ -29,7 +29,7 @@ const registerTrainer = asyncHandler(async (req, res) => {
 
   if (trainerExists) {
     res.status(400);
-    throw new Error('Trainer already registered');
+    throw new Error("Trainer already registered");
   }
 
   const trainer = await Trainer.create({
@@ -48,18 +48,18 @@ const registerTrainer = asyncHandler(async (req, res) => {
     });
   } else {
     res.status(400);
-    throw new Error('Invalid trainer data');
+    throw new Error("Invalid trainer data");
   }
 });
 
 const getTrainees = asyncHandler(async (req, res) => {
-  const trainer = await Trainer.findById(req.user.id).populate('trainee');
-  
+  const trainer = await Trainer.findById(req.user.id).populate("trainee");
+
   if (trainer) {
     res.json(trainer.trainee);
   } else {
     res.status(404);
-    throw new Error('Trainer not found');
+    throw new Error("Trainer not found");
   }
 });
 
@@ -71,13 +71,8 @@ const countTrainees = asyncHandler(async (req, res) => {
     res.json({ traineeCount });
   } else {
     res.status(404);
-    throw new Error('Trainer not found');
+    throw new Error("Trainer not found");
   }
 });
 
-export {
-  authTrainer,
-  registerTrainer,
-  getTrainees,
-  countTrainees,
-};
+export { authTrainer, registerTrainer, getTrainees, countTrainees };

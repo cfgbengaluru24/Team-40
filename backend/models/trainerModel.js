@@ -16,12 +16,12 @@ const trainerSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    trainee: [
+    programs: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
-      }
-    ]
+        ref: "Program",
+      },
+    ],
   },
   {
     timestamps: true,

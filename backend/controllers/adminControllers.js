@@ -35,4 +35,12 @@ const deleteTrainer = asyncHandler(async (req, res) => {
   }
 });
 
-export { authAdmin, deleteTrainer };
+const getTrainers = asyncHandler(async (req, res) => {
+  const trainers = await Trainer.find({});
+
+  res.status(200).json({
+    trainers,
+  });
+});
+
+export { authAdmin, deleteTrainer, getTrainers };
