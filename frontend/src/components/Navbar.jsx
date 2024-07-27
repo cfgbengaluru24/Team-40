@@ -40,7 +40,7 @@ const Navbar = () => {
                 endpoint = `${api}/api/program/get-programs`;
                 break;
             case 'Assign Users':
-                endpoint = `${api}/api/users/fetch`; // Adjust if needed
+                endpoint = `${api}/api/users/fetch`; 
                 break;
             default:
                 return;
@@ -191,7 +191,7 @@ const Navbar = () => {
                         error={error}
                         programs={programs}
                         onDelete={handleDeleteTrainer}
-                        onAssignProgram={onAssignProgram} 
+                        onAssignProgram={onAssignProgram}
                     />
                 )}
                 {selectedOption === 'List of Users' && (

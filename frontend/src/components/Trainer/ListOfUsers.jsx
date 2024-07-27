@@ -1,26 +1,19 @@
-import React from 'react'
-import '../../../public/styles.css'
+import React from 'react';
 
-function ListOfUsers() {
+const ListOfUsers = ({ data, loading, error }) => {
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error}</p>;
+
     return (
-        <div className='whole-listofusers-div'>
-        <h1 className='user-title'>Your team!</h1>
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Location</th>
-                    <th>Business</th>
-                    <th>Income</th>
-                </tr>
-                <tr>
-                    <td>xxxx</td>
-                    <td>xxxx</td>
-                    <td>xxxx</td>
-                    <td>xxxx</td>
-                </tr>
-            </table>
+        <div>
+            <h2>List of Users</h2>
+            <ul>
+                {data.map(user => (
+                    <li key={user._id}>{user.username}</li>
+                ))}
+            </ul>
         </div>
-    )
-}
+    );
+};
 
-export default ListOfUsers
+export default ListOfUsers;

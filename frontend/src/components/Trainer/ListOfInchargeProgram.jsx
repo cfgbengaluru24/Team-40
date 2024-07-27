@@ -1,24 +1,19 @@
-import React from 'react'
-import '../../../public/styles.css'
+import React from 'react';
 
-function ListOfInchargeProgram() {
+const ListOfInchargeProgram = ({ data, loading, error }) => {
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error}</p>;
+
     return (
-        <div className='whole-listofusers-div-for-programs'>
-            <h1 className='user-title'>Team's Programs!</h1>
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>SHG Program</th>
-                    <th>Progress</th>
-                </tr>
-                <tr>
-                    <td>xxxx</td>
-                    <td>xxxx</td>
-                    <td>xxxx</td>
-                </tr>
-            </table>
+        <div>
+            <h2>List of Incharge Program</h2>
+            <ul>
+                {data.map(program => (
+                    <li key={program._id}>{program.name}</li>
+                ))}
+            </ul>
         </div>
-    )
-}
+    );
+};
 
-export default ListOfInchargeProgram
+export default ListOfInchargeProgram;
