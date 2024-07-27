@@ -2,7 +2,7 @@ import asyncHandler from "express-async-handler";
 import generateToken from "../utils/generateToken.js";
 import Trainer from "../models/trainerModel.js";
 
-const ADMIN_EMAIL = "admin";
+const ADMIN_EMAIL = "admin@gmail.com";
 const ADMIN_PASSWORD = "1234";
 
 const authAdmin = asyncHandler(async (req, res) => {

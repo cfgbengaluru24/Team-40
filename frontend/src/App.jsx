@@ -6,6 +6,7 @@ import Dashboard from './components/Trainer/Dashboard';
 import LoginSignUp from './components/LoginSignUp'; 
 import SignupForm from './components/SignUpForm';
 import LoginForm from './components/LoginForm';
+import AdminLogin from './components/Admin/AdminLogin';
 
 function App() {
   const router = createBrowserRouter(
@@ -15,6 +16,7 @@ function App() {
         <Route path='login' element={<LoginForm />} />
         <Route path='register' element={<SignupForm />} />
         <Route path="admin" element={<Admin />} />
+        <Route path="admin/login" element={<AdminLogin />} />
         <Route path="trainer" element={<Dashboard />} />
       </Route>
     )

@@ -1,6 +1,6 @@
 import express from "express";
 import Trainer from "../models/trainerModel.js";
-import User from "../models/userModel.js"; // Assuming you have a user model
+import User from "../models/userModel.js"; 
 const router = express.Router();
 import {
   authAdmin,

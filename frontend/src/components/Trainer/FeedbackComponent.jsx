@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Import CSS for react-toastify
 import './FeedBackStyles.css';
 
 const FeedbackComponent = () => {
@@ -17,6 +19,11 @@ const FeedbackComponent = () => {
         const average = validFeedbacks.length > 0 ? (sum / validFeedbacks.length).toFixed(2) : null;
 
         setAverageRating(average);
+    };
+
+    const handleSubmit = () => {
+        // Here you can handle the submit action, e.g., sending data to a server
+        toast.success('Feedback submitted successfully!');
     };
 
     return (
@@ -77,6 +84,10 @@ const FeedbackComponent = () => {
                     Average Rating: {averageRating}
                 </div>
             )}
+            <button onClick={handleSubmit} className="submit-button">
+                Submit Feedback
+            </button>
+            <ToastContainer />
         </div>
     );
 };
