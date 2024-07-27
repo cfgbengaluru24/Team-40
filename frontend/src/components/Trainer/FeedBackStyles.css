@@ -1,0 +1,62 @@
+/* FeedbackComponent.css */
+.feedback-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.feedback-container h4 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+}
+
+.feedback-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.feedback-item p {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.feedback-item label {
+    display: block;
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555;
+}
+
+.feedback-item input[type="radio"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.feedback-item input[type="radio"]+span {
+    font-size: 1em;
+    color: #555;
+}
+
+.average-rating {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #e9ecef;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.feedback-container::after {
+    content: '';
+    display: block;
+    clear: both;
+}

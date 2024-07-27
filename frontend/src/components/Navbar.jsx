@@ -39,7 +39,7 @@ const Navbar = () => {
             case 'List of Programs':
                 endpoint = `${api}/api/program/get-programs`;
                 break;
-            case 'Assign Users':
+            case 'Assign Groups':
                 endpoint = `${api}/api/users/fetch`; 
                 break;
             default:
@@ -60,7 +60,7 @@ const Navbar = () => {
                 } else {
                     throw new Error('Data is not an array');
                 }
-            } else if (option === 'List of Users' || option === 'Assign Users') {
+            } else if (option === 'List of Users' || option === 'Assign Groups') {
                 if (Array.isArray(result)) {
                     setData(result);
                 } else {
@@ -204,7 +204,7 @@ const Navbar = () => {
                 {selectedOption === 'List of Programs' && (
                     <ProgramsComponent />
                 )}
-                {selectedOption === 'Assign Users' && (
+                {selectedOption === 'Assign Groups' && (
                     <AssignUsersComponent
                         data={data}
                         loading={loading}
