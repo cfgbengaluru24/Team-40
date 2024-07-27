@@ -2,8 +2,8 @@ import React from 'react'
 import '../../public/styles.css'
 import { optionsadmins, optionstrainer } from './optionslist'
 
-function Navbar() {
-    const optionsToDisplay = optionsadmins;
+function NavbarTrainer() {
+    const optionsToDisplay = optionstrainer;
 
     return (
         <div className='navbar'>
@@ -14,9 +14,8 @@ function Navbar() {
                 );
             })}
             </div>
-            <button className='open-close'>➤</button>
         </div>
     )
 }
 
-export default Navbar
+export default NavbarTrainer
