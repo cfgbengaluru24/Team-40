@@ -142,6 +142,36 @@ const Navbar = () => {
         }
     };
 
+    const onAssignProgram = async (trainerId, programId) => {
+        try {
+            const response = await fetch(`${api}/api/admin/assign-program`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ trainerId, programId }),
+            });
+
+            const result = await response.json();
+
+            if (result.message !== 'Program assigned successfully') {
+                throw new Error(result.message);
+            }
+
+            // Update the data state to reflect the program assignment
+            setData((prevData) =>
+                prevData.map((trainer) =>
+                    trainer._id === trainerId
+                        ? { ...trainer, programs: [...trainer.programs, programId] }
+                        : trainer
+                )
+            );
+        } catch (error) {
+            setError(error.message);
+        }
+    };
+
+
     return (
         <div className='navbar-container'>
             <div className='navbar'>
@@ -161,6 +191,7 @@ const Navbar = () => {
                         error={error}
                         programs={programs}
                         onDelete={handleDeleteTrainer}
+                        onAssignProgram={onAssignProgram} 
                     />
                 )}
                 {selectedOption === 'List of Users' && (

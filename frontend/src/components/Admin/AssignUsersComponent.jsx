@@ -23,62 +23,48 @@ const AssignUsersComponent = ({ data, loading, error, fetchTrainers, assignTrain
 
     return (
         <div className='assign-users-container'>
-            <table className='assign-users-table'>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Location</th>
-                        <th>Business</th>
-                        <th>Income</th>
-                        <th>Trainer</th>
-                        <th>Assigned</th>
-                        <th>Assign</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {data.map((user) => (
-                        <tr key={user._id}>
-                            <td>{user.name}</td>
-                            <td>{user.location}</td>
-                            <td>{user.business}</td>
-                            <td>{user.income}</td>
-                            <td>{user.trainer_id}</td>
-                            <td>{user.isAssigned ? 'Yes' : 'No'}</td>
-                            <td>
-                                {isAssigned[user._id] ? (
-                                    'Assigned'
-                                ) : (
-                                    <div>
-                                        <select
-                                            value={selectedTrainer[user._id] || ''}
-                                            onChange={(e) =>
-                                                setSelectedTrainer((prev) => ({
-                                                    ...prev,
-                                                    [user._id]: e.target.value,
-                                                }))
-                                            }
-                                            disabled={user.isAssigned}
-                                        >
-                                            <option value='' disabled>Select Trainer</option>
-                                            {trainers.map((trainer) => (
-                                                <option key={trainer._id} value={trainer._id}>
-                                                    {trainer.name}
-                                                </option>
-                                            ))}
-                                        </select>
-                                        <button
-                                            onClick={() => handleAssign(user._id)}
-                                            disabled={!selectedTrainer[user._id]}
-                                        >
-                                            Assign
-                                        </button>
-                                    </div>
-                                )}
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+            {data.map((user) => (
+                <div key={user._id} className='user-card'>
+                    <img src={user.image || 'default-image-url.jpg'} alt={user.name} className='user-image' />
+                    <div className='user-info'>
+                        <h3>{user.name}</h3>
+                        <p><strong>Location:</strong> {user.location}</p>
+                        <p><strong>Business:</strong> {user.business}</p>
+                        <p><strong>Income:</strong> {user.income}</p>
+                        <p><strong>Trainer:</strong> {user.trainer_id}</p>
+                        <p><strong>Assigned:</strong> {user.isAssigned ? 'Yes' : 'No'}</p>
+                        {isAssigned[user._id] ? (
+                            <p>Assigned</p>
+                        ) : (
+                            <div className='assign-container'>
+                                <select
+                                    value={selectedTrainer[user._id] || ''}
+                                    onChange={(e) =>
+                                        setSelectedTrainer((prev) => ({
+                                            ...prev,
+                                            [user._id]: e.target.value,
+                                        }))
+                                    }
+                                    disabled={user.isAssigned}
+                                >
+                                    <option value='' disabled>Select Trainer</option>
+                                    {trainers.map((trainer) => (
+                                        <option key={trainer._id} value={trainer._id}>
+                                            {trainer.name}
+                                        </option>
+                                    ))}
+                                </select>
+                                <button
+                                    onClick={() => handleAssign(user._id)}
+                                    disabled={!selectedTrainer[user._id]}
+                                >
+                                    Assign
+                                </button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            ))}
         </div>
     );
 };
