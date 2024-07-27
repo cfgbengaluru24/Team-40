@@ -1,12 +1,12 @@
 import React from 'react'
+import '../../public/styles.css'
 
-const Footer = () => {
-  return (
-    <div>
-      Footer
-    </div>
-  )
+function Footer() {
+    return (
+        <div className='footer-div'>
+            <p>© 2024 Best Practices Foundation | All rights reserved</p>
+        </div>
+    )
 }
 
 export default Footer
-Footer

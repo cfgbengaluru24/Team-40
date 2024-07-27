@@ -1,0 +1,112 @@
+@font-face {
+    font-family: rochester;
+    src: url(./fonts/Rochester-Regular.ttf);
+}
+
+@font-face {
+    font-family: noto;
+    src: url(./fonts/NotoSerifDisplay-VariableFont_wdth,wght.ttf);
+}
+
+@font-face {
+    font-family: metrophobic;
+    src: url(./fonts/Metrophobic-Regular.ttf);
+}
+
+@font-face {
+    font-family: magical;
+    src: url(./fonts/MagicalSource.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 10vh;
+    align-items: center;
+    z-index: 100;
+    background-color: #FF6969;
+    font-size: 1.1rem;
+    padding: 0rem 1rem;
+    font-family: metrophobic;
+    color: aliceblue;
+}
+
+.logo{
+    transform: translateX(2rem);
+}
+
+.header-buttons-div {
+    width: 16rem;
+    font-family: metrophobic;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-button {
+    cursor: pointer;
+    font-family: metrophobic;
+    color: aliceblue;
+    background-color: #FF6969;
+    font-size: 1rem;
+    transform: translateX(-2rem);
+}
+
+.footer-div {
+    position: fixed;
+    left: 0;
+    bottom: 1rem;
+    width: 100%;
+    opacity: 50%;
+    color: gray;
+    text-align: center;
+    font-family: metrophobic;
+}
+
+.navbar{
+    left: 0;
+    width: 20vw;
+    background-color: #0C1844;
+    opacity: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-elem{
+    left: 0;
+    width: 20vw;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+    height: fit-content;
+    /* transform: translateY(6rem); */
+}
+
+.navbar-elem button {
+    align-items: center;
+    font-family: metrophobic;
+    cursor: pointer;
+    font-size: 1.2rem;
+    background-color: #0C1844;
+    color: aliceblue;
+}
+
+.open-close{
+    height: 10vh;
+    cursor: pointer;
+}
+

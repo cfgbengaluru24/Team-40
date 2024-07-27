@@ -1,10 +1,13 @@
 import React from 'react'
+import Header from '../Header'
 import Footer from '../Footer'
+import Navbar from '../Navbar'
 
 const Admin = () => {
   return (
     <div>
-      Admin
+      <Header />
+      <Navbar />
       <Footer />
     </div>
   )
