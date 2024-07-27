@@ -52,7 +52,7 @@
 }
 
 .header-buttons-div {
-    width: 22rem;
+    width: 30rem;
     font-family: metrophobic;
     color: aliceblue;
     display: flex;
@@ -69,7 +69,7 @@
 }
 
 .footer-div {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 1rem;
     width: 100%;
@@ -666,7 +666,7 @@ select {
 .home-one{
     background-color: #FFF5E1;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -699,7 +699,7 @@ select {
 
 .page2{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
     display: flex;
     background-color: #EBE3D5;
@@ -775,7 +775,15 @@ select {
 
 .page3{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.sub-div{
+    height: 90vh;
+    width: 100%;
     background-color: #FFF5E1;
     display: flex;
     flex-direction: row;
@@ -792,7 +800,7 @@ select {
 .last-img{
     height: 22rem;
     width: 40rem;
-    transform: translateY(2rem);
+    transform: translateY(5rem);
 }
 
 .right3{
@@ -807,7 +815,7 @@ select {
     width: 50vw;
     color: #ff6969;
     font-family: 2rem;
-    transform: translate(3rem, 8rem);
+    transform: translate(3rem, 12rem);
     font-size: 1rem;
     font-family: metrophobic;
     text-align: justify;
@@ -820,7 +828,42 @@ select {
     font-family: rochester;
     text-align: center;
     font-weight: 550;
-    transform: translate(-12rem, 8rem);
+    transform: translate(-12rem, 12rem);
     justify-content: center;
     align-items: center;
+}
+
+.are-you{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: #FF6969;
+    color: #f1f1f1;
+}
+
+.yes-last{
+    font-size: 1.2rem;
+    font-family: metrophobic;
+    transform: translateX(-4rem);
+}
+
+.yes-last:hover{
+    cursor: pointer;
+    text-decoration: underline;   
+}
+
+.icons{
+    display: flex;
+    width: 20rem;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fa-brands{
+    color: #FF6969;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
