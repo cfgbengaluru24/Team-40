@@ -13,19 +13,14 @@ router.post("/create-checkout-session", async (req, res) => {
     const products = [
         {
             "name": "Product 1",
-            "price": 2000,
-            "quantity": 2
-        },
-        {
-            "name": "Product 2",
-            "price": 1500,
+            "price": 500,
             "quantity": 1
-        }
+        },
     ];
 
     const lineItems = products.map(product => ({
         price_data: {
-            currency: 'usd',
+            currency: 'inr',
             product_data: {
                 name: product.name,
             },

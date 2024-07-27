@@ -4,15 +4,15 @@ import '../../public/styles.css'
 import Header from "./Header";
 import Footer from "./Footer";
 
-var userIsRegistered = false;
 
-function LoginSignUp() {
+
+function LoginSignUp({ IsRegistered }) {
     return (
         <>
         <Header />
         <div className="container">
-            <h1 className="user-title2">{userIsRegistered? "Welcome Back!" : "Welcome!"}</h1>
-            <Form text={userIsRegistered} />
+            <h1 className="user-title2">{IsRegistered? "Welcome Back!" : "Welcome!"}</h1>
+            <Form text={IsRegistered} />
         </div>
         <Footer />
         </>
