@@ -7,6 +7,7 @@ import adminRoutes from "./routes/adminRoutes.js";
 import trainerRoutes from "./routes/trainerRoutes.js";
 import pgmRoutes from "./routes/pgmRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
+import stripeRoutes from "./routes/stripeRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -20,7 +21,7 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/trainer", trainerRoutes);
 app.use("/api/program", pgmRoutes);
 app.use("/api/users", userRoutes);
-
+app.use("/api/pay", stripeRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
