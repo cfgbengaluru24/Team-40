@@ -11,10 +11,10 @@ const programSchema = mongoose.Schema(
       ref: "Trainer",
       required: true,
     },
-    userIds: [
+    programs: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
+        ref: "Program",
       },
     ],
   },
