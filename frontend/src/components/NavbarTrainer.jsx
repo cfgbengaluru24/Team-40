@@ -4,7 +4,8 @@ import UsersComponent from './Admin/UsersComponent';
 import ProgramsComponent from './Admin/ProgramsComponent';
 import FeedbackComponent from './Trainer/FeedbackComponent';
 import TraineesChart from './Graphs/TraineesChart';
-import InlineBaselineDataComponent from './Trainer/InlineBaselineDataComponent'; // Import the new component
+import InlineBaselineDataComponent from './Trainer/InlineBaselineDataComponent';
+import AddFAQsComponent from '../../../backend/controllers/FAQs/AddFAQsComponent';
 
 const NavbarTrainer = () => {
     const [selectedOption, setSelectedOption] = useState(null);
@@ -25,6 +26,27 @@ const NavbarTrainer = () => {
     useEffect(() => {
         fetchPrograms();
     }, []);
+
+    const handleAddFAQs = async (faqs) => {
+        const programId = "60d0fe4f5311236168a109cb";
+        try {
+            const response = await fetch(`${api}/api/knowledge/add`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ programId, faqs }),
+            });
+
+            if (!response.ok) {
+                throw new Error("Failed to add FAQs");
+            }
+
+            console.log("FAQs added successfully");
+        } catch (error) {
+            console.error("Error adding FAQs:", error);
+        }
+    };
 
     const fetchData = async (option) => {
         let endpoint = '';
@@ -106,6 +128,9 @@ const NavbarTrainer = () => {
                 )}
                 {selectedOption === 'Inline / Baseline Data' && (
                     <InlineBaselineDataComponent />
+                )}
+                {selectedOption === "Add FAQs" && (
+                    <AddFAQsComponent onAddFAQs={handleAddFAQs} />
                 )}
                 {selectedOption === 'My Statistics' && (
                     <TraineesChart />
