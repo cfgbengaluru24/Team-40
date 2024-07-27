@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { optionstrainer } from './optionslist';
 import UsersComponent from './Admin/UsersComponent';
 import ProgramsComponent from './Admin/ProgramsComponent';
-import FeedbackComponent from './Trainer/FeedbackComponent'
+import FeedbackComponent from './Trainer/FeedbackComponent';
 import TraineesChart from './Graphs/TraineesChart';
-
+import InlineBaselineDataComponent from './Trainer/InlineBaselineDataComponent'; // Import the new component
 
 const NavbarTrainer = () => {
     const [selectedOption, setSelectedOption] = useState(null);
@@ -104,8 +104,12 @@ const NavbarTrainer = () => {
                 {selectedOption === 'Feedback of User' && (
                     <FeedbackComponent />
                 )}
-                {selectedOption === "My Statistics" && <TraineesChart />}
-
+                {selectedOption === 'Inline / Baseline Data' && (
+                    <InlineBaselineDataComponent />
+                )}
+                {selectedOption === 'My Statistics' && (
+                    <TraineesChart />
+                )}
             </div>
         </div>
     );
