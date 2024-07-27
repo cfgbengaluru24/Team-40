@@ -1,11 +1,13 @@
 import React from 'react'
+import Footer from '../Footer'
 
-const admin = () => {
+const Admin = () => {
   return (
     <div>
       Admin
+      <Footer />
     </div>
   )
 }
 
-export default admin
+export default Admin
