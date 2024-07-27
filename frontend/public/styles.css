@@ -867,3 +867,27 @@ select {
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+.fa-headphones{
+    color: #FF6969;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: solid 0.1rem #FF6969;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+.audio-div{
+    color: #FF6969;
+    font-size: 1rem;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    transform: translate(-43rem, 8rem);
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
