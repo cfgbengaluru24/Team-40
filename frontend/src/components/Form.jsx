@@ -9,7 +9,8 @@ function Form(props) {
             {props.text === false && (
                 <input type="password" placeholder="Password" />
             )}
-            <button type="submit">{props.text ? "Login" : "Register"}</button>
+            <button type="submit">{props.text ? "Login" : "Register"}</button><br/>
+            <a className="not-logged-in">{props.text ? "No account? Sign Up!" : "Already have an account? Login!"}</a>
         </form>
     );
 }

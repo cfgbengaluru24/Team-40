@@ -4,7 +4,7 @@ import '../../public/styles.css'
 import Header from "./Header";
 import Footer from "./Footer";
 
-var userIsRegistered = true;
+var userIsRegistered = false;
 
 function LoginSignUp() {
     return (

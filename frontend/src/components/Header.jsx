@@ -39,6 +39,7 @@ const Header = () => {
       <div className='header-buttons-div'>
         <button className='header-button'>About Us</button>
         <button className='header-button' onClick={handleDonate}>Donate</button>
+        <button className='header-button'>Home</button>
       </div>
     </div>
   )

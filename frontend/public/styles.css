@@ -46,7 +46,7 @@
 }
 
 .header-buttons-div {
-    width: 16rem;
+    width: 22rem;
     font-family: metrophobic;
     color: aliceblue;
     display: flex;
@@ -367,7 +367,7 @@ td {
 .user-title {
     color: #FF6969;
     font-size: 3rem;
-    font-family: rochester;
+    font-family: magical;
     text-align: center;
     font-weight: 500;
 }
@@ -640,4 +640,13 @@ select {
 .assign-container button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+}
+
+.not-logged-in{
+    color: #FF6969;
+    cursor: pointer;
+    font-family: metrophobic;
+    text-decoration: underline;
+    font-weight: 400;
+    transform: translateY(2rem);
 }
