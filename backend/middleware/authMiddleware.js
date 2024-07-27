@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import asyncHandler from "express-async-handler";
-import User from "../models/userModel.js";
+import Trainer from "../models/trainerModel.js";
 
 const protectRoute = asyncHandler(async (req, res, next) => {
   let token;
@@ -17,7 +17,7 @@ const protectRoute = asyncHandler(async (req, res, next) => {
         process.env.JWT_ACCESS_TOKEN_SECRET
       );
 
-      req.user = await User.findById(decodedToken.id).select("-password");
+      req.trainer = await Trainer.findById(decodedToken.id).select("-password");
       next();
     } catch (error) {
       console.log(error);

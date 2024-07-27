@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import cors from "cors";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
-import userRoutes from "./routes/userRoutes.js";
+import adminRoutes from "./routes/adminRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -13,7 +13,8 @@ app.use(cors());
 
 connectDB();
 
-app.use("/api/users", userRoutes);
+app.use("/api/admin", adminRoutes);
+app.use("/api/trainer", trainerRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

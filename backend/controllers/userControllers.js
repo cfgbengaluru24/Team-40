@@ -1,5 +1,5 @@
 import asyncHandler from "express-async-handler";
-import User from "../models/userModel.js";
+import User from "../models/trainerModel.js";
 import generateToken from "../utils/generateToken.js";
 
 const getAllUsers = asyncHandler(async (req, res) => {
