@@ -3,7 +3,8 @@ import { optionsadmins } from './optionslist';
 import TrainersComponent from './Admin/TrainersComponent';
 import UsersComponent from './Admin/UsersComponent';
 import ProgramsComponent from './Admin/ProgramsComponent';
-import AssignUsersComponent from './Admin/AssignUsersComponent'; // Import AssignUsersComponent
+import AssignUsersComponent from './Admin/AssignUsersComponent'; 
+import MultiSeries from './Graphs/MultiSeries';
 
 const Navbar = () => {
     const [selectedOption, setSelectedOption] = useState(null);
@@ -40,7 +41,7 @@ const Navbar = () => {
                 endpoint = `${api}/api/program/get-programs`;
                 break;
             case 'Assign Groups':
-                endpoint = `${api}/api/users/fetch`; 
+                endpoint = `${api}/api/users/fetch`;
                 break;
             default:
                 return;
@@ -213,6 +214,7 @@ const Navbar = () => {
                         assignTrainer={assignTrainer}
                     />
                 )}
+                {selectedOption === "My Statistics" && <MultiSeries />}
                 {/* Add similar components for other options */}
             </div>
         </div>
