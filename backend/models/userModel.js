@@ -23,6 +23,10 @@ const userSchema = mongoose.Schema(
       ref: "Trainer",
       required: true,
     },
+    isAssigned: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,
