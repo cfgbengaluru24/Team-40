@@ -4,6 +4,7 @@ import connectDB from "./config/db.js";
 import cors from "cors";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 import adminRoutes from "./routes/adminRoutes.js";
+import trainerRoutes from "./routes/trainerRoutes.js";
 
 dotenv.config();
 const app = express();
