@@ -11,7 +11,6 @@ const programSchema = mongoose.Schema(
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Trainer', 
             required: true,
-            default: "defaultTrainerId" 
         },
         userIds: [
             {
