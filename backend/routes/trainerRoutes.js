@@ -13,4 +13,7 @@ router.post("/register", registerTrainer);
 router.get("/trainees", getTrainees);
 router.get("/trainees/count", countTrainees);
 
+
+
+
 export default router;

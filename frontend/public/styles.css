@@ -41,7 +41,7 @@
     color: aliceblue;
 }
 
-.logo{
+.logo {
     transform: translateX(2rem);
 }
 
@@ -73,7 +73,7 @@
     font-family: metrophobic;
 }
 
-.navbar{
+.navbar {
     left: 0;
     width: 20vw;
     background-color: #0C1844;
@@ -84,7 +84,7 @@
     align-items: center;
 }
 
-.navbar-elem{
+.navbar-elem {
     left: 0;
     width: 20vw;
     display: flex;
@@ -105,8 +105,199 @@
     color: aliceblue;
 }
 
-.open-close{
+.open-close {
     height: 10vh;
     cursor: pointer;
 }
 
+.navbar-container {
+    display: flex;
+}
+
+.navbar {
+    width: 200px;
+}
+
+.content {
+    margin-left: 20px;
+    flex-grow: 1;
+    margin-top: 50px;
+}
+
+.trainers-table-container {
+    overflow-x: auto;
+}
+
+.trainers-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.trainers-table th,
+.trainers-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.trainers-table th {
+    background-color: #f4f4f4;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.delete-button:hover {
+    opacity: 0.8;
+}
+
+.assign-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.assign-button:hover {
+    opacity: 0.8;
+}
+
+select {
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.users-table-container {
+    overflow-x: auto;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.users-table th,
+.users-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.users-table th {
+    background-color: #f4f4f4;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.delete-button:hover {
+    opacity: 0.8;
+}
+
+.assign-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.assign-button:hover {
+    opacity: 0.8;
+}
+
+select {
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.programs-table-container {
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.programs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.programs-table th,
+.programs-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.programs-table th {
+    background-color: #f4f4f4;
+}
+
+.programs-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.assign-users-container {
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.assign-users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.assign-users-table th,
+.assign-users-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.assign-users-table th {
+    background-color: #f4f4f4;
+}
+
+.assign-users-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.select-container {
+    display: flex;
+    align-items: center;
+}
+
+.select-container select {
+    margin-right: 10px;
+}
+
+button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
