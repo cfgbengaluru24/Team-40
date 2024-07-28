@@ -111,6 +111,7 @@
     color: aliceblue;
 }
 
+
 .open-close {
     height: 10vh;
     cursor: pointer;
@@ -478,7 +479,7 @@ form button {
 }
 
 .delete-button {
-    background-color: red;
+    background-color: #FF6969;
     color: white;
     border: none;
     padding: 6px 12px;
@@ -492,7 +493,7 @@ form button {
 }
 
 .assign-button {
-    background-color: #4CAF50;
+    background-color: #ffadad;
     color: white;
     border: none;
     padding: 6px 12px;
@@ -534,7 +535,7 @@ select {
 }
 
 .delete-button {
-    background-color: red;
+    background-color: #FF6969;
     color: white;
     border: none;
     padding: 6px 12px;
@@ -548,7 +549,7 @@ select {
 }
 
 .assign-button {
-    background-color: #4CAF50;
+    background-color: #ffadad;
     color: white;
     border: none;
     padding: 6px 12px;
@@ -642,7 +643,7 @@ select {
 
 .assign-container button {
     padding: 5px 10px;
-    background-color: #007bff;
+    background-color: #C80036;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -654,7 +655,7 @@ select {
     cursor: not-allowed;
 }
 
-.not-logged-in{
+.not-logged-in {
     color: #FF6969;
     cursor: pointer;
     font-family: metrophobic;
@@ -663,7 +664,7 @@ select {
     transform: translateY(1rem);
 }
 
-.home-one{
+.home-one {
     background-color: #FFF5E1;
     height: 100vh;
     width: 100%;
@@ -676,28 +677,28 @@ select {
     row-gap: 0.5rem;
 }
 
-.main-h1{
+.main-h1 {
     font-size: 4rem;
     color: #ff6969;
     font-family: magical;
     font-weight: 200;
 }
 
-.sub-t{
+.sub-t {
     font-size: 2rem;
     color: #FF6969;
     font-family: rochester;
     font-weight: 200;
 }
 
-.this{
+.this {
     transform: translateY(14rem);
     font-size: 1rem;
     font-family: noto;
     font-weight: 600;
 }
 
-.page2{
+.page2 {
     height: 100vh;
     width: 100%;
     position: relative;
@@ -707,7 +708,7 @@ select {
     flex-direction: column;
 }
 
-.left{
+.left {
     height: 100vh;
     width: 50vw;
     display: flex;
@@ -716,7 +717,7 @@ select {
     text-align: center;
 }
 
-.right{
+.right {
     height: 100vh;
     width: 50vw;
     display: flex;
@@ -740,7 +741,8 @@ select {
     filter: blur(5px);
 }
 
-.quote-container, .image-container {
+.quote-container,
+.image-container {
     transition: opacity 1s, filter 1s;
     opacity: 1;
     filter: none;
@@ -752,7 +754,8 @@ select {
 }
 
 .image-container {
-    height: 300px; /* Adjust as needed */
+    height: 300px;
+    /* Adjust as needed */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -773,14 +776,14 @@ select {
     transition: opacity 1s;
 }
 
-.page3{
+.page3 {
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.sub-div{
+.sub-div {
     height: 90vh;
     width: 100%;
     background-color: #FFF5E1;
@@ -788,7 +791,7 @@ select {
     flex-direction: row;
 }
 
-.left3{
+.left3 {
     height: 90vh;
     width: 40vw;
     display: flex;
@@ -796,13 +799,13 @@ select {
     align-items: center;
 }
 
-.last-img{
+.last-img {
     height: 22rem;
     width: 40rem;
     transform: translateY(3rem);
 }
 
-.right3{
+.right3 {
     height: 90vh;
     width: 60vw;
     display: flex;
@@ -810,11 +813,11 @@ select {
     row-gap: 2rem;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.aboutus-p{
+.aboutus-p {
     width: 50vw;
     color: #ff6969;
     font-family: 2rem;
@@ -847,7 +850,7 @@ a{
     align-items: center;
 }
 
-.are-you{
+.are-you {
     display: flex;
     justify-content: right;
     align-items: center;
@@ -858,31 +861,31 @@ a{
     color: #f1f1f1;
 }
 
-.yes-last{
+.yes-last {
     font-size: 1.2rem;
     font-family: metrophobic;
     transform: translateX(-4rem);
 }
 
-.yes-last:hover{
+.yes-last:hover {
     cursor: pointer;
-    text-decoration: underline;   
+    text-decoration: underline;
 }
 
-.icons{
+.icons {
     display: flex;
     width: 20rem;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.fa-brands{
+.fa-brands {
     color: #FF6969;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
-.fa-headphones{
+.fa-headphones {
     color: #FF6969;
     font-size: 1.5rem;
     cursor: pointer;
@@ -891,7 +894,7 @@ a{
     padding: 1rem;
 }
 
-.audio-div{
+.audio-div {
     color: #FF6969;
     font-size: 1rem;
     cursor: pointer;
@@ -906,7 +909,7 @@ a{
     align-items: center;
 }
 
-.wrapper1{
+.wrapper1 {
     display: flex;
     flex-direction: row;
 }

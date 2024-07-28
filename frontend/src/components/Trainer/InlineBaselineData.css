@@ -47,12 +47,11 @@
     flex-basis: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
 }
 
 .submit-button {
     padding: 12px 25px;
-    background-color: #007bff;
+    background-color: #C80036;
     color: white;
     border: none;
     border-radius: 8px;
@@ -61,5 +60,5 @@
 }
 
 .submit-button:hover {
-    background-color: #0056b3;
+    background-color: #C80036;
 }

@@ -46,8 +46,6 @@ const InlineBaselineDataComponent = () => {
                             required
                         />
                     </div>
-                </div>
-                <div className="form-column">
                     <div className="form-group">
                         <label>Baseline Income:</label>
                         <input
