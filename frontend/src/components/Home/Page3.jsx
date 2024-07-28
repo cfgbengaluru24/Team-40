@@ -21,7 +21,7 @@ function Page3() {
             </div>
             <Link to='/register'>
                 <div className='are-you'><p className='yes-last'>Are you a trainer? Click here to explore more!</p></div>
-            </Link> 
+            </Link>
         </div>
     )
 }

@@ -8,6 +8,7 @@ import SignupForm from './components/SignUpForm';
 import LoginForm from './components/LoginForm';
 import AdminLogin from './components/Admin/AdminLogin';
 import { registerLicense } from "@syncfusion/ej2-base";
+import Success from './components/Success';
 
 registerLicense(
   "Ngo9BigBOggjHTQxAR8/V1NCaF1cWWhBYVF1WmFZfVpgcl9DY1ZTQGYuP1ZhSXxXdkJhXX9ZcHFRQmBYUkY="
@@ -23,6 +24,7 @@ function App() {
         <Route path="admin" element={<Admin />} />
         <Route path="admin/login" element={<AdminLogin />} />
         <Route path="trainer" element={<Dashboard />} />
+        <Route path='success' element={<Success />} />
       </Route>
     )
   );
